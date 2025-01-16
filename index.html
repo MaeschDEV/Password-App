@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Password App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/Images/password_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png">
+    <script src="main.js"></script>
+</head>
+<body>
+<h1 class="Header">
+    Password Generator
+</h1>
+<h2 class="Subheader">
+    By MaeschDEV
+</h2>
+<div class="Center">
+    <div id="PasswordDisplay" class="Output">
+        Klicken Sie Generieren!
+    </div>
+    <div class="GeneratorField">
+        <h2>
+            Passwort anpassen
+        </h2>
+        <hr>
+        <form onsubmit="generatePassword(event)">
+            <div class="FormContent">
+                <input id="length" type="number" name="length" value=12>
+                <label for="length">Passwortlänge</label>
+            </div>
+            <div class="FormContent">
+                <input class="CheckBox" id="smallLetters" type="checkbox" name="smallLetters">
+                <label for="smallLetters">Kleinbuchstaben</label>
+            </div>
+            <div class="FormContent">
+                <input class="CheckBox" id="largeLetters" type="checkbox" name="largeLetters">
+                <label for="largeLetters">Großbuchstaben</label>
+            </div>
+            <div class="FormContent">
+                <input class="CheckBox" id="numbers" type="checkbox" name="numbers">
+                <label for="numbers">Nummern</label>
+            </div>
+            <div class="FormContent">
+                <input class="CheckBox" id="specialCharacters" type="checkbox" name="specialCharacters">
+                <label for="specialCharacters">Sonderzeichen</label>
+            </div>
+            <div class="FormContent">
+                <button class="GenerateButton" type="submit">Generieren</button>
+                <button class="CopyButton" type="button" onclick="copyPassword(event)">Kopieren</button>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
